@@ -1,13 +1,12 @@
 package ramStudio.chessGame;
 
-import ramStudio.extensions.Colors;
+import ramStudio.enums.Colors;
 import ramStudio.piecies.*;
 
 public class Board {
-    private final int sizeX = 8;
+    private final ChessPiece[][] grid;
 
     private Colors currentPlayer;
-    private ChessPiece[][] grid;
 
     public Board() {
         grid = new ChessPiece[8][8];
@@ -18,6 +17,8 @@ public class Board {
     public void draw() {
         for (int row = 7; row > -1; row--) {
             System.out.print((row + 1) + "  ");
+
+            int sizeX = 8;
 
             for (int column = 0; column < sizeX; column++) {
                 if (grid[row][column] != null)

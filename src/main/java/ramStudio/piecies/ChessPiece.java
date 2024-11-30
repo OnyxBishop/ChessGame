@@ -1,27 +1,27 @@
 package ramStudio.piecies;
 
 import ramStudio.chessGame.Board;
-import ramStudio.extensions.Colors;
+import ramStudio.enums.Colors;
 
 public abstract class ChessPiece {
-    protected Colors Color;
-    protected boolean Check;
+    protected Colors color;
+    protected boolean check;
 
     protected ChessPiece(Colors color) {
-        Color = color;
-        Check = true;
+        this.color = color;
+        check = true;
     }
 
     public Colors getColor() {
-        return this.Color;
+        return this.color;
     }
 
     public boolean getCheck(){
-        return Check;
+        return check;
     }
 
     public void setCheck(){
-        Check = false;
+        check = false;
     }
 
     public abstract boolean canMove(Board board, int row, int column, int toRow, int toColumn);

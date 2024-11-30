@@ -1,4 +1,4 @@
-package ramStudio.extensions;
+package ramStudio.enums;
 
 public enum Colors {
     Black,

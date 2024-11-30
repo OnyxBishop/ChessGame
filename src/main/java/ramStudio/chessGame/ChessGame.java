@@ -1,6 +1,6 @@
 package ramStudio.chessGame;
 
-import ramStudio.extensions.Colors;
+import ramStudio.enums.Colors;
 import java.util.Scanner;
 
 public class ChessGame {

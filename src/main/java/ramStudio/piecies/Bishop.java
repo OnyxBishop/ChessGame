@@ -1,7 +1,7 @@
 package ramStudio.piecies;
 
 import ramStudio.chessGame.Board;
-import ramStudio.extensions.Colors;
+import ramStudio.enums.Colors;
 
 public class Bishop extends ChessPiece{
     public Bishop(Colors color) {
@@ -31,11 +31,11 @@ public class Bishop extends ChessPiece{
         }
 
         var enemy = board.getPiece(toRow, toColumn);
-        return enemy == null || enemy.getColor() != Color;
+        return enemy == null || enemy.getColor() != color;
     }
 
     @Override
     public String getSymbol() {
-        return Color == Colors.White ? "B" : "b";
+        return color == Colors.White ? "B" : "b";
     }
 }

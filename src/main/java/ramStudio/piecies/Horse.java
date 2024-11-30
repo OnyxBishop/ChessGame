@@ -1,7 +1,7 @@
 package ramStudio.piecies;
 
 import ramStudio.chessGame.Board;
-import ramStudio.extensions.Colors;
+import ramStudio.enums.Colors;
 
 public class Horse extends ChessPiece{
     public Horse(Colors color) {
@@ -17,11 +17,11 @@ public class Horse extends ChessPiece{
             return false;
 
         ChessPiece target = board.getPiece(toRow, toColumn);
-        return target == null || target.getColor() != Color;
+        return target == null || target.getColor() != color;
     }
 
     @Override
     public String getSymbol() {
-        return Color == Colors.White ? "H" : "h";
+        return color == Colors.White ? "H" : "h";
     }
 }
